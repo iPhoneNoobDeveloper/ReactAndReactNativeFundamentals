@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Builds
+dist/
+build/
+
+# Env
+.env
+
+# OS
+.DS_Store
+
+# React Native / Expo
+.expo/
+ios/Pods/
