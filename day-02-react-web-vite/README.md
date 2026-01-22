@@ -1,16 +1,61 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 📘 `day-02-react-web-vite/README.md`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```md
+# Day 02: React Web Fundamentals (Vite)
 
-## React Compiler
+This day introduces **React fundamentals** using a modern
+Vite-based React setup.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The focus is on understanding **how React works**, not styling
+or advanced tooling.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Concepts Covered
+
+### React Basics
+- React project setup using Vite
+- File and folder structure
+- JSX syntax (JavaScript + XML)
+- Entry point (`main.jsx`)
+- Root component (`App.jsx`)
+
+### Components
+- Functional components
+- Component reusability
+- File-based component organization
+
+### Props
+- Passing data from parent to child
+- Props destructuring
+- Boolean props
+
+### Rendering
+- Rendering lists using `map`
+- Using `key` correctly
+- Conditional rendering (`&&`, ternary)
+
+---
+
+## Key Files Explained
+
+- `index.html`
+  - Contains the root DOM node (`<div id="root" />`)
+- `src/main.jsx`
+  - Bootstraps the React app
+  - Similar to `@main` / AppDelegate
+- `src/App.jsx`
+  - Root React component
+- `src/UserCard.jsx`
+  - Reusable component demonstrating props and conditionals
+
+---
+
+## How to Run
+
+```bash
+npm install
+npm run dev
