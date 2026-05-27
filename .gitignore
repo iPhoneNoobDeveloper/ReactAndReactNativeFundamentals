@@ -13,4 +13,4 @@ build/
 
 # React Native / Expo
 .expo/
-ios/Pods/
+ios/Pods/.private-ai/
