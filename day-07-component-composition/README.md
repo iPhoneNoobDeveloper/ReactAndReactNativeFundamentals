@@ -1,16 +1,58 @@
-# React + Vite
+# Day 07: Component Composition & Reusable UI Patterns
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This day focuses on breaking a React screen into small reusable components and composing them together.
 
-Currently, two official plugins are available:
+## Concepts Covered
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Component composition
+- Reusable layout components
+- Reusable container components
+- Passing props to child components
+- Passing callback props for events
+- Using the `children` prop to wrap flexible JSX content
 
-## React Compiler
+## Component Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+App
+├── Section
+├── Card
+└── ReusableButton
+```
 
-## Expanding the ESLint configuration
+## What This App Demonstrates
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`App.jsx` renders two example sections:
+
+- A profile card with text content and a reusable button
+- A learning progress card with a list of completed topics
+
+`Section.jsx` is a reusable layout wrapper. It accepts a `heading` prop and renders any nested content through `children`.
+
+`Card.jsx` is a reusable container component. It accepts a `title` prop and uses `children` so each card can show different JSX inside the same card layout.
+
+`ReusableButton.jsx` accepts a `label` prop for display text and an `onClick` callback prop for behavior.
+
+## Key Learning
+
+The `children` prop lets a component wrap any JSX placed between its opening and closing tags.
+
+Example:
+
+```jsx
+<Card title="Profile Card">
+  <p>Name: Nirav</p>
+  <p>Role: Staff iOS Engineer</p>
+</Card>
+```
+
+This keeps the card layout reusable while allowing each card to show different content.
+
+## How to Run
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite in your terminal.
