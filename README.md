@@ -39,3 +39,4 @@ App
 - Day 10: React Native Lists with `FlatList`
 - Day 11: React Native Navigation with Native Stack
 - Day 12: React Native Search & Filter
+- Day 13: React Native API Calls with fetch
